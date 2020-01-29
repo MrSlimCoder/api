@@ -1,0 +1,32 @@
+{
+  "name": "freely-api",
+  "version": "0.0.1",
+  "description": "The core API for Freely",
+  "scripts": {
+    "lint": "eslint -c .eslintrc.json ./src/**.js",
+    "lint:fix": "eslint -c .eslintrc.json --fix ./src/**.js && echo \"\u001b[1m\u001b[32mOK\u001b[39m\u001b[22m\" || echo \"\u001b[1m\u001b[31mNot OK\u001b[39m\u001b[22m\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freelyis/api.git"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/freelyis/api/issues"
+  },
+  "homepage": "https://github.com/freelyis/api#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-jsdoc": "^21.0.0",
+    "husky": "^4.2.1"
+  },
+  "dependencies": {
+    "polka": "^0.5.2"
+  }
+}
