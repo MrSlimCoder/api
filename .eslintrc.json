@@ -1,46 +1,48 @@
 {
-    "env": {
-        "es6": true,
-        "node": true
-    },
-    "parserOptions": {
-        "ecmaVersion": 2017
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:jsdoc/recommended"
-    ],
-    "plugins": [
-        "jsdoc"
-    ],
-    "rules": {
-        "no-var": "error",
-        "semi": "error",
-        "indent": ["error", 4],
-        "prefer-const": "error",
-        "keyword-spacing": "error",
-        "eqeqeq": ["error", "always"],
-        "eol-last": ["error", "always"],
-        "brace-style": ["error", "stroustrup"],
-        "comma-dangle": ["error", "always-multiline"],
-        "object-curly-spacing": ["error", "always"],
+	"env": {
+		"es6": true,
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2018
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:jsdoc/recommended"
+	],
+	"plugins": [
+		"jsdoc"
+	],
+	"rules": {
+		"semi": "error",
+		"no-var": "error",
+		"prefer-const": "error",
+		"keyword-spacing": "error",
+		"eqeqeq": ["error", "always"],
+		"eol-last": ["error", "always"],
+		"brace-style": ["error", "stroustrup"],
+		"comma-dangle": ["error", "always-multiline"],
+		"object-curly-spacing": ["error", "always"],
 
-        "camelcase": "error",
+		"quotes": ["error", "double", {
+			"allowTemplateLiterals": true
+		}],
 
-        "quotes": ["error", "double", {
-            "allowTemplateLiterals": true
-        }],
+		"indent": ["error", "tab", {
+			"SwitchCase": 1,
+			"flatTernaryExpressions": true
+		}],
 
-        "object-curly-newline": ["error", {
-            "ExportDeclaration": "never",
-            "ImportDeclaration": "always"
-        }],
+		"object-curly-newline": ["error", {
+			"ExportDeclaration": "never",
+			"ImportDeclaration": "always"
+		}],
 
-        "prefer-destructuring": ["error", {
-            "array": false,
-            "object": true
-        }, {
-            "enforceForRenamedProperties": true
-        }]
-    }
+		"prefer-destructuring": ["error", {
+			"array": false,
+			"object": true
+		}, {
+			"enforceForRenamedProperties": false
+		}]
+	}
 }
